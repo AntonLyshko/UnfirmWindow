@@ -1,0 +1,88 @@
+@import "@styles/variables.scss";
+@import "@styles/media.scss";
+
+.put-contact-in-fire {
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  top: calc(100% - 0px);
+  z-index: 100;
+  transition: 0.3s ease-in-out;
+  height: 60vh;
+  border-right: 1px solid #e2e2e2;
+
+  &.active {
+    transform: translateY(-60vh);
+  }
+
+  .header {
+    display: flex;
+    position: absolute;
+    justify-content: space-around;
+    padding: 6px;
+    font-size: 16px;
+    align-items: center;
+    width: 100%;
+    background: #fff;
+    color: $blue_origin;
+    font-weight: 500;
+    cursor: pointer;
+    z-index: 1000;
+    top: -38px;
+    border-bottom: 1px solid #e2e2e2;
+
+    svg {
+      color: $blue_origin;
+    }
+
+    &:hover {
+      color: $blue_accent;
+      svg {
+        color: $blue_accent;
+      }
+    }
+  }
+}
+
+.contacts-list {
+  padding: 0 !important;
+
+  .contacts-content {
+    padding-left: 10px;
+  }
+
+  .contacts-item {
+    margin: 0 !important;
+
+    &:hover {
+      background: #1111110a;
+    }
+  }
+
+  .new-list {
+    .avatar {
+      height: 2rem;
+      width: 2rem;
+      min-width: 2rem;
+    }
+    .contacts-content {
+      display: flex;
+      align-items: center;
+    }
+    .contacts-info {
+      width: 100%;
+    }
+  }
+}
+
+.scroll_contacts_style_as {
+  overflow-x: hidden;
+  height: 100% !important;
+}
+
+.user_name_to {
+  white-space: nowrap;
+  width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
